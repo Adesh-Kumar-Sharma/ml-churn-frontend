@@ -64,6 +64,8 @@ export default function Home() {
     }
   };
 
+  const docsUrl = process.env.NEXT_PUBLIC_FASTAPI_BACKEND_URL + "/docs";
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4 bg-gray-100 dark:bg-gray-900">
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md dark:bg-gray-800">
@@ -74,7 +76,7 @@ export default function Home() {
           Try my Churn Prediction App! No technical knowledge needed—just enter sample customer data and see the model output instantly.
         </h2>
         <h3 className="text-1sl text-center text-gray-900 dark:text-white">
-          (May take up to a minute for first request)
+          (May take up to a minute for the first request)
         </h3>
         <form onSubmit={onSubmit} className="space-y-4">
           {Object.keys(form).map(key => (
@@ -114,6 +116,9 @@ export default function Home() {
         )}
         <div className="mt-4 text-center text-gray-500 dark:text-gray-400 text-sm">
           Built with ❤️ by <a href="https://www.linkedin.com/in/adesh-kumar-sharma-jbp/" className="text-blue-500 hover:underline">Adesh Kumar Sharma</a>
+        </div>
+        <div className="mt-4 text-center text-gray-500 dark:text-gray-400 text-sm">
+          <a href={docsUrl ?? "#"} className="text-blue-500 hover:underline">ML Backend Docs</a>
         </div>
         <div className="mt-4 text-center text-gray-500 dark:text-gray-400 text-sm">
           <a href="https://github.com/Adesh-Kumar-Sharma/ml-churn-prediction/" className="text-blue-500 hover:underline">GitHub Repo (ML)</a>
