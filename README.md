@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Customer Churn ML Demo — Next.js Frontend
+
+A modern, interactive frontend for the Dockerized FastAPI Customer Churn Prediction API. Easily input sample customer data, submit to the ML backend, and get instant churn status.
+
+---
+
+## Features
+
+- Beautiful, user-friendly data input form for churn prediction.
+- Sends sample data to FastAPI ML API and displays prediction (status & probability).
+- SPA built with Next.js, React, and Tailwind CSS.
+- No technical skills needed! No Postman or curl — just try, see results live.
+- Deployable on Vercel (free) and easily connects to Docker or cloud FastAPI backend.
+
+---
+
+## Live Demo
+
+Try it now: [https://ml-churn-frontend.vercel.app](https://ml-churn-frontend.vercel.app)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (>=18)
+- Yarn or npm
+
+### Installation
+
+#### 1. Clone the repo
+
+```bash
+git clone https://github.com/yourusername/churn-ml-frontend.git
+cd churn-ml-frontend
+```
+
+#### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### Configuration
+
+Edit `.env` (or use environment variables) to point to ML API backend:
+
+```text
+NEXT_PUBLIC_API_URL="http://localhost:8000"
+```
+
+or the cloud URL if deployed
+
+```text
+NEXT_PUBLIC_API_URL="https://ml-churn-prediction.onrender.com"
+```
+
+### Running Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
 
-## Learn More
+1. Fill out all fields in the form (e.g. tenure, payment method, etc.).
+2. Submit data — the app POSTs to the FastAPI `/predict` route.
+3. Instantly view churn prediction & probability.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend:** Next.js, React, Tailwind CSS
+- **Backend:** FastAPI ML API (Python, Docker)
+- **Deployment:** Vercel (frontend), Railway/Render (backend)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Example API Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```json
+{
+    "tenure": 12,
+    "MonthlyCharges": 70,
+    "TotalCharges": 840,
+    "Contract": "Month-to-month",
+    "PaymentMethod": "Electronic check",
+    "InternetService": "Fiber optic",
+    "OnlineSecurity": "No",
+    "TechSupport": "No"
+}
+```
+
+---
+
+## Screenshots
+
+![Form Demo](public/demo-form.png)
+![Prediction Output](public/demo-result.png)
+
+---
+
+## Project Structure
+
+```table
+.
+├── pages/
+│ └── index.js # App homepage with ML form
+├── components/
+│ └── PredictionForm.jsx # Form and UI logic
+├── public/
+│ └── demo-form.png
+├── tailwind.config.js
+├── .env
+...
+```
+
+---
+
+## Deployment
+
+- **Frontend**: Vercel (automatic deploy via GitHub)
+- **Backend**: Docker, Railway, or Render — publicly accessible URL required.
+
+---
+
+---
+
+## Related Links
+
+- FastAPI backend repo — [https://github.com/Adesh-Kumar-Sharma/ml-churn-prediction](https://github.com/Adesh-Kumar-Sharma/ml-churn-prediction)
+- FastAPI backend docs website — [https://ml-churn-prediction.onrender.com/docs](https://ml-churn-prediction.onrender.com/docs)
+
+---
