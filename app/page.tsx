@@ -47,8 +47,19 @@ export default function Home() {
       );
       setResult(data);
       setLoading(false);
-    } catch (err: any) {
-      setResult({ error: err?.response?.data?.error || "Prediction failed" });
+    } catch (err: unknown) {
+      let errorMessage = "Prediction failed";
+      
+      // First, check if it's an error from Axios
+      if (axios.isAxiosError(err) && err.response) {
+        // If the backend sent a specific error message, use it
+        errorMessage = err.response.data.error || "An error occurred with the API.";
+      } else if (err instanceof Error) {
+        // For other types of errors (e.g., network issues), use their message
+        errorMessage = err.message;
+      }
+      
+      setResult({ error: errorMessage });
       setLoading(false);
     }
   };
@@ -102,13 +113,13 @@ export default function Home() {
           </div>
         )}
         <div className="mt-4 text-center text-gray-500 dark:text-gray-400 text-sm">
-          Built with ❤️ by Adesh
+          Built with ❤️ by <a href="https://www.linkedin.com/in/adesh-kumar-sharma-jbp/" className="text-blue-500 hover:underline">Adesh Kumar Sharma</a>
         </div>
         <div className="mt-4 text-center text-gray-500 dark:text-gray-400 text-sm">
-          <a href="https://github.com/Adesh-Kumar-Sharma/ml-churn-prediction" className="text-blue-500 hover:underline">GitHub Repo (ML)</a>
+          <a href="https://github.com/Adesh-Kumar-Sharma/ml-churn-prediction/" className="text-blue-500 hover:underline">GitHub Repo (ML)</a>
         </div>
         <div className="mt-4 text-center text-gray-500 dark:text-gray-400 text-sm">
-          <a href="https://github.com/Adesh-Kumar-Sharma/ml-churn-prediction" className="text-blue-500 hover:underline">GitHub Repo (Frontend)</a>
+          <a href="https://github.com/Adesh-Kumar-Sharma/ml-churn-frontend/" className="text-blue-500 hover:underline">GitHub Repo (Frontend)</a>
         </div>
       </div>
     </main>
