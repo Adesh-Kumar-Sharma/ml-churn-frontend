@@ -136,5 +136,7 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 - FastAPI backend repo — [https://github.com/Adesh-Kumar-Sharma/ml-churn-prediction](https://github.com/Adesh-Kumar-Sharma/ml-churn-prediction)
 - FastAPI backend docs website — [https://ml-churn-prediction.onrender.com/docs](https://ml-churn-prediction.onrender.com/docs)
+- Next.js frontend repo — [https://github.com/Adesh-Kumar-Sharma/ml-churn-frontend](https://github.com/Adesh-Kumar-Sharma/ml-churn-frontend)
+- Next.js frontend website — [https://ml-churn-frontend.vercel.app](https://ml-churn-frontend.vercel.app)
 
 ---
