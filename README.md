@@ -4,7 +4,27 @@ A modern, interactive frontend for the Dockerized FastAPI Customer Churn Predict
 
 ---
 
-## Features
+## Live Demo
+
+Try it now: [https://ml-churn-frontend.vercel.app](https://ml-churn-frontend.vercel.app)
+
+---
+
+## 📋 Table of Contents
+
+- [Features](#-features)
+- [Getting Started](#%EF%B8%8F-getting-started)
+- [Usage](#-usage)
+- [Tech Stack](#%EF%B8%8F-tech-stack)
+- [Example API Request](#-example-api-request)
+- [Screenshots](#-screenshots)
+- [Project Structure](#-project-structure)
+- [Deployment](#%EF%B8%8F-deployment)
+- [Related Links](#-related-links)
+
+---
+
+## ✨ Features
 
 - Beautiful, user-friendly data input form for churn prediction.
 - Sends sample data to FastAPI ML API and displays prediction (status & probability).
@@ -14,13 +34,7 @@ A modern, interactive frontend for the Dockerized FastAPI Customer Churn Predict
 
 ---
 
-## Live Demo
-
-Try it now: [https://ml-churn-frontend.vercel.app](https://ml-churn-frontend.vercel.app)
-
----
-
-## Getting Started
+## ⚙️ Getting Started
 
 ### Prerequisites
 
@@ -66,7 +80,7 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## Usage
+## 🚀 Usage
 
 1. Fill out all fields in the form (e.g. tenure, payment method, etc.).
 2. Submit data — the app POSTs to the FastAPI `/predict` route.
@@ -74,7 +88,7 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 - **Frontend:** Next.js, React, Tailwind CSS
 - **Backend:** FastAPI ML API (Python, Docker)
@@ -82,7 +96,7 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## Example API Request
+## 💻 Example API Request
 
 ```json
 {
@@ -99,14 +113,14 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## Screenshots
+## 📷 Screenshots
 
 ![Form Demo](public/demo-form.png)
 ![Prediction Output](public/demo-result.png)
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```table
 .
@@ -123,16 +137,14 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## Deployment
+## ☁️ Deployment
 
 - **Frontend**: Vercel (automatic deploy via GitHub)
 - **Backend**: Docker, Railway, or Render — publicly accessible URL required.
 
 ---
 
----
-
-## Related Links
+## 🔗 Related Links
 
 - FastAPI backend repo — [https://github.com/Adesh-Kumar-Sharma/ml-churn-prediction](https://github.com/Adesh-Kumar-Sharma/ml-churn-prediction)
 - FastAPI backend docs website — [https://ml-churn-prediction.onrender.com/docs](https://ml-churn-prediction.onrender.com/docs)
