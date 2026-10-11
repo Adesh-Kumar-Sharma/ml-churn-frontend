@@ -115,7 +115,7 @@ export default function Home() {
           </div>
         )}
         <div className="mt-4 text-center text-gray-500 dark:text-gray-400 text-sm">
-          Built with ❤️ by <a href="https://www.linkedin.com/in/adesh-kumar-sharma-jbp/" className="text-blue-500 hover:underline">Adesh Kumar Sharma</a>
+          Built with ❤️ by <a href="https://www.linkedin.com/in/adeshsharmacs/" className="text-blue-500 hover:underline">Adesh Kumar Sharma</a>
         </div>
         <div className="mt-4 text-center text-gray-500 dark:text-gray-400 text-sm">
           <a href={docsUrl ?? "#"} className="text-blue-500 hover:underline">ML Backend Docs</a>
